@@ -26,7 +26,13 @@ const Styles = styled.div`
     }
     .page_footer{
       background:black;
+
+    }
+    .page_footer h3{
       color:white;
+    }
+    .page_footer h4,p{
+      color:grey;
     }
 `;
 
@@ -47,6 +53,8 @@ export const Footer =()=>(
       <Jumbo fluid className="page_footer">
         <Container>
             <h3>Website coded by Artur Sahakian</h3>
+            <h4>Contact me at artursahak99@gmail.com</h4>
+            <p> Leading innovation in the field of web programming and development.Our services are educational.</p>
         </Container>
       </Jumbo>
   </Styles>
