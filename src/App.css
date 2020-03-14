@@ -1,3 +1,22 @@
+body::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar
+{
+    width: 22px;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: salmon ;
+}
 .controlled_font{
   color:white;
   font-weight:bold;
@@ -11,10 +30,8 @@
   transform:rotate(-30deg) skew(25deg) scale(.8);
   transition: 0.5s
 }
-
 .iphone_cont  img {
   position:absolute;
-
   transition: 0.5s;
   height:100%;
   opacity: .2
@@ -26,26 +43,6 @@
    font-size:1.5vw;
 }
 
-
-
-.home_welcome{
-
-
-
-  width:100%;
-  height:1000px;
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-}
-.home_welcome > div:nth-child(1){
-  height:100%;
-  background:lightblue;
-}
-.home_welcome > div:nth-child(2){
- height:100%;
-  background:lightblue;
-  color:darkslategray;
-}
 .container:hover  .iphone_img:nth-child(1){
   transform:translate(80px,-80px);
   opacity: .6;
@@ -68,17 +65,120 @@
   display:grid;
   grid-template-columns: 2fr 1fr;
 }
-
-#note_image{
-  width:70%;
-  margin-left:30px;
-  margin-top:30px;
+.home_welcome{
+  width:100%;
+  height:1000px;
+  overflow-y: scroll;
+   overflow-x: hidden;
+   perspective: 1px;
+   transform-style: preserve-3d;
 }
-#ice_image{
-  width:70%;
-  margin-left:30px;
-  margin-top:30px;
+section {
+  padding: 25vh 10%;
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  transform-style: inherit;
+}
+
+section, section:before {
+  background: 50% 50% / cover;
+}
+
+section:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* The brightest duotone color */
+.darken::before {
+  background-color: rgba(221, 204, 0, 1);
+}
+
+/* The darkest duotone color */
+.lighten::after {
+  background-color: rgba(221, 0, 0, 1);
+}
+
+#hero-1:before {
+
+  background-image: url("./assets/car1.jpg");
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+}
+
+#hero-2:before {
+
+  background-image: url("./assets/perfume1.jpg");
+  transform: translateZ(-1px) scale(2);
+  z-index: -2;
+}
+
+#hero-3:before {
+
+  background-image: url("./assets/perfume2.jpg");
+	background-attachment: fixed;
+  z-index: -3;
+}
+
+.normal-scroll {
+  color:black;
+  background: darkslategrey;
+  transform: translateZ(0);
+}
+
+.parallax_container {
+  color:white;
+  font-size: 4vw;
+  margin: 0 auto;
+  padding: 25vh 0;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    #section-5:before {
+        background-attachment: scroll;
+    }
 }
 #home_text1{
   font-size:1.2em;
+}
+.home_welcome::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.home_welcome::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.home_welcome::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+.movie_article{
+transition:1s;
+width:400px;
+height:700px;
+float:left;
+margin:5px;
+color:white;
+}
+.restrain{
+  width:60%;
+  margin-left:20%;
+}
+.articles_page{
+  height:3500px;
 }

@@ -2,7 +2,9 @@ import React,{Component} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {Home} from './Home';
 import {About} from './About';
+import {Canvas} from './Canvas';
 import {Contact} from './Contact';
+import {Article} from './components/Articles';
 import {NoMatch} from './NoMatch';
 import {Layout} from './components/Layout';
 import {NavigationBar} from './components/Navigation';
@@ -17,13 +19,13 @@ class App extends Component{
       <NavigationBar />
       <Jumbotron />
            <Layout>
-            // we define router here
            <Router>
                 <Switch>
                      <Route exact path="/" component={Home} />
-                  // here we are declaring our routes to components :
                      <Route path="/about" component={About} />
                      <Route path="/contact" component={Contact} />
+                     <Route path="/canvas" component={Canvas} />
+                     <Route path="/article" component={Article} />
                      <Route component={NoMatch} />
                 </Switch>
            </Router>

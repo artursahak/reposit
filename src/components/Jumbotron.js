@@ -8,7 +8,8 @@ import boatImage from '../assets/boat.jpg';
 
 const Styles = styled.div`
     .jumbo{
-      background:url(${boatImage}) no-repeat fixed bottom;
+      background:url(${boatImage}) no-repeat ;
+      background-attachment:fixed;
       background-size:cover;
       color:#ccc;
       height:200px;

@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 const Styles = styled.div`
 .contact_container{background-color:rgba(0,0,0,.1);
-  /*border-radius:5px;*/
-  /*box-shadow: 10px 10px 50px #AEEA00;*/
+
+  box-shadow: 10px 10px 50px #bbb;
   border-radius:30px;
   padding:5%;
   display:grid;
